@@ -6,10 +6,10 @@ public class Food {
     private String fdcId;
     private String description;
     private String gtinUpc;
-    private String[] ingredients;
+    private String ingredients;
     private Nutrients nutrients;
 
-    public Food(String fdcId, String description, String gtinUpc, String[] ingredients) {
+    public Food(String fdcId, String description, String gtinUpc, String ingredients) {
         this.fdcId = fdcId;
         this.description = description;
         this.gtinUpc = gtinUpc;
@@ -18,7 +18,6 @@ public class Food {
 
     public Food createFoodFromJson(String json) {
         Food food = new Gson().fromJson(json, Food.class);
-        //make a request and maybe set it to the other element as well
         return food;
     }
 
@@ -34,7 +33,7 @@ public class Food {
         return gtinUpc;
     }
 
-    public String[] getIngredients() {
+    public String getIngredients() {
         return ingredients;
     }
 
