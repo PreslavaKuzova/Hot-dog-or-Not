@@ -9,4 +9,6 @@ public class Constants {
     public final static String PARSE_FOOD = "foods";
     public final static String PARSE_NUTRIENTS = "labelNutrients";
 
+    public final static int CAPACITY = 1000;
+    public final static int INITIAL_VALUE = 1;
 }
