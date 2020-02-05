@@ -30,7 +30,7 @@ public abstract class LFUCache <K> {
         }
     }
 
-    public synchronized void remove() {
+    private synchronized void remove() {
         if (cache.size() == Constants.CAPACITY) {
             int leastFrequent = Collections.min(order.keySet());
             List<K> toRemove = order.get(leastFrequent).iterator().next();

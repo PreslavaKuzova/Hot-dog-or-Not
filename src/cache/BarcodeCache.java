@@ -2,6 +2,7 @@ package cache;
 
 import model.Food;
 
+import java.util.Arrays;
 import java.util.List;
 
 public class BarcodeCache extends LFUCache<Food> {
@@ -23,9 +24,13 @@ public class BarcodeCache extends LFUCache<Food> {
         return instance;
     }
 
+    public void addBarcode(String gtinUpc, Food food) {
+        super.add(gtinUpc, Arrays.asList(food));
+    }
+
     public Food getFoodByBarcode(String gtinUpc) {
         List<Food> result = super.retrieveInformation(gtinUpc);
-        if(result != null) {
+        if (result != null) {
             return result.iterator().next();
         }
         return null;

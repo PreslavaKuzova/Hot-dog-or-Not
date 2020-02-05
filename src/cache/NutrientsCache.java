@@ -2,6 +2,8 @@ package cache;
 
 import model.NutritionalValues;
 
+import java.util.List;
+
 public class NutrientsCache extends LFUCache<NutritionalValues> {
 
     private static volatile NutrientsCache instance;
@@ -20,6 +22,16 @@ public class NutrientsCache extends LFUCache<NutritionalValues> {
             }
         }
         return instance;
+    }
+
+    public NutritionalValues getNutrientsByIdentifier(String fdcId) {
+        List<NutritionalValues> nutriets = super.retrieveInformation(fdcId);
+
+        if(nutriets != null) {
+            return nutriets.iterator().next();
+        }
+
+        return null;
     }
 
 }

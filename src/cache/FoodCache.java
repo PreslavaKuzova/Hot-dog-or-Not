@@ -2,6 +2,8 @@ package cache;
 
 import model.Food;
 
+import java.util.List;
+
 public class FoodCache extends LFUCache<Food> {
     private static volatile FoodCache instance;
 
@@ -21,4 +23,7 @@ public class FoodCache extends LFUCache<Food> {
         return instance;
     }
 
+    public List<Food> getFoodListByName(String name) {
+        return super.retrieveInformation(name);
+    }
 }
