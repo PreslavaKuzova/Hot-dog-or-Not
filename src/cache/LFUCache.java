@@ -42,7 +42,7 @@ public abstract class LFUCache <K> {
         }
     }
 
-    public synchronized List<K> retrieveInformation(String criteria) {
+    protected synchronized List<K> retrieveInformation(String criteria) {
         if (cache.containsKey(criteria)) {
             int frequency = usageFrequency.get(criteria);
             List<K> product = cache.get(criteria);

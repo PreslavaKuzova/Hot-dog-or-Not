@@ -83,6 +83,11 @@ public class Client {
         return foodList;
     }
 
+    private static Food getFoodByBarcode() {
+
+        return null;
+    }
+
     //TODO: make it synchronized
     private static HttpRequest createFoodSearchRequest(String food) {
         StringBuffer sb = new StringBuffer();
