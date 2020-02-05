@@ -25,9 +25,37 @@ public class Client {
         gson = new Gson();
         List<Food> all = getFoodDetails("Cheddar cheese");
 
+        Food food = all.iterator().next();
+        NutritionalValues values = getNutrients(food.getFdcId());
+        System.out.println(values.getFat());
+
         for (Food f : all) {
-            System.out.println(f.getFdcId() + " " + f.getNutritionalValues().getFat());
+            System.out.println(f.getFdcId());
         }
+    }
+
+    private static NutritionalValues getNutrients(String fdcId) {
+        NutritionalValues nutrients = null;
+
+        try {
+            HttpRequest nutrientsRequest = createNutrientRequest(fdcId);
+
+            CompletableFuture<String> nutrientsResponse =
+                    client
+                    .sendAsync(nutrientsRequest, HttpResponse.BodyHandlers.ofString())
+                    .thenApply(HttpResponse::body);
+
+            JsonObject nutrientsJson = gson.fromJson(nutrientsResponse.get(), JsonObject.class)
+                    .getAsJsonObject(Constants.PARSE_NUTRIENTS);
+
+            nutrients = gson.fromJson(nutrientsJson, NutritionalValues.class);
+
+        } catch (InterruptedException | ExecutionException e) {
+            System.out.println("Something went wrong while trying to send the API request");
+            e.printStackTrace();
+        }
+
+        return nutrients;
     }
 
     private static List<Food> getFoodDetails(String food) {
@@ -35,27 +63,19 @@ public class Client {
 
         try {
             HttpRequest foodRequest = createFoodSearchRequest(food);
-            HttpResponse<String> foodResponse = client.send(foodRequest, HttpResponse.BodyHandlers.ofString());
-            JsonArray result = gson.fromJson(foodResponse.body(), JsonObject.class)
+            CompletableFuture<String> foodResponse = client
+                    .sendAsync(foodRequest, HttpResponse.BodyHandlers.ofString())
+                    .thenApply(HttpResponse::body);;
+
+            JsonArray result = gson.fromJson(foodResponse.get(), JsonObject.class)
                     .getAsJsonArray(Constants.PARSE_FOOD);
 
             for (JsonElement element : result) {
                 Food currentFood = gson.fromJson(element.getAsJsonObject(), Food.class);
-
-                HttpRequest nutrientsRequest = createNutrientRequest(currentFood.getFdcId());
-
-                CompletableFuture<String> nutrientsResponse = client
-                                .sendAsync(nutrientsRequest, HttpResponse.BodyHandlers.ofString())
-                                .thenApply(HttpResponse::body);
-
-                JsonObject nutrientsJson = gson.fromJson(nutrientsResponse.get(), JsonObject.class)
-                        .getAsJsonObject(Constants.PARSE_NUTRIENTS);
-
-                currentFood.setNutritionalValues(gson.fromJson(nutrientsJson, NutritionalValues.class));
                 foodList.add(currentFood);
             }
 
-        } catch (InterruptedException | IOException | ExecutionException e ) {
+        } catch (InterruptedException | ExecutionException e) {
             System.out.println("Something went wrong while trying to send the API request");
             e.printStackTrace();
         }
@@ -63,6 +83,7 @@ public class Client {
         return foodList;
     }
 
+    //TODO: make it synchronized
     private static HttpRequest createFoodSearchRequest(String food) {
         StringBuffer sb = new StringBuffer();
         sb.append(Constants.API_URL)
@@ -74,7 +95,6 @@ public class Client {
         return HttpRequest.newBuilder(URI.create(sb.toString())).build();
     }
 
-    //TODO: make it synchronized
     private static HttpRequest createNutrientRequest(String fdcId) {
         StringBuffer sb = new StringBuffer();
         sb.append(Constants.API_URL)

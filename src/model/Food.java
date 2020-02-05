@@ -5,7 +5,6 @@ public class Food {
     private String description;
     private String gtinUpc;
     private String ingredients;
-    private NutritionalValues nutrients;
 
     public String getFdcId() {
         return fdcId;
@@ -23,11 +22,4 @@ public class Food {
         return ingredients;
     }
 
-    public NutritionalValues getNutritionalValues() {
-        return nutrients;
-    }
-
-    public void setNutritionalValues(NutritionalValues nutrients) {
-        this.nutrients = nutrients;
-    }
 }
