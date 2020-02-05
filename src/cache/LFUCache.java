@@ -2,17 +2,13 @@ package cache;
 
 import utils.Constants;
 
-import java.util.HashMap;
-import java.util.LinkedHashSet;
-import java.util.Map;
-import java.util.Set;
-import java.util.Collections;
+import java.util.*;
 
 public abstract class LFUCache <K> {
 
-    private Map<String, K[]> cache;
+    private Map<String, List<K>> cache;
     private Map<String, Integer> usageFrequency;
-    private Map<Integer, Set<K[]>> order;
+    private Map<Integer, Set<List<K>>> order;
 
     protected LFUCache() {
         cache = new HashMap<>();
@@ -20,7 +16,7 @@ public abstract class LFUCache <K> {
         order = new HashMap<>();
     }
 
-    public synchronized void add(String criteria, K[] product) {
+    public synchronized void add(String criteria, List<K> product) {
         if (!cache.containsKey(criteria)) {
             remove();
             cache.putIfAbsent(criteria, product);
@@ -37,7 +33,7 @@ public abstract class LFUCache <K> {
     public synchronized void remove() {
         if (cache.size() == Constants.CAPACITY) {
             int leastFrequent = Collections.min(order.keySet());
-            K[] toRemove = order.get(leastFrequent).iterator().next();
+            List<K> toRemove = order.get(leastFrequent).iterator().next();
             order.get(leastFrequent).remove(toRemove);
 
             if (order.get(leastFrequent).size() == 0) {
@@ -46,10 +42,10 @@ public abstract class LFUCache <K> {
         }
     }
 
-    public synchronized K[] retrieveInformation(String criteria) {
+    public synchronized List<K> retrieveInformation(String criteria) {
         if (cache.containsKey(criteria)) {
             int frequency = usageFrequency.get(criteria);
-            K[] product = cache.get(criteria);
+            List<K> product = cache.get(criteria);
 
             usageFrequency.put(criteria, frequency + 1);
             order.get(frequency).remove(product);
@@ -65,7 +61,6 @@ public abstract class LFUCache <K> {
 
             return cache.get(criteria);
         }
-
         return null;
     }
 
