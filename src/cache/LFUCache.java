@@ -16,7 +16,7 @@ public abstract class LFUCache <K> {
         order = new HashMap<>();
     }
 
-    public synchronized void add(String criteria, List<K> product) {
+    protected synchronized void add(String criteria, List<K> product) {
         if (!cache.containsKey(criteria)) {
             remove();
             cache.putIfAbsent(criteria, product);

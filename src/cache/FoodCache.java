@@ -23,6 +23,10 @@ public class FoodCache extends LFUCache<Food> {
         return instance;
     }
 
+    public void addFoods(String name, List<Food> foods) {
+        super.add(name, foods);
+    }
+
     public List<Food> getFoodListByName(String name) {
         return super.retrieveInformation(name);
     }
