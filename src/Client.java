@@ -16,6 +16,7 @@ import model.NutritionalValues;
 import utils.Constants;
 
 import javax.imageio.ImageIO;
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -23,6 +24,7 @@ import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
+import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
@@ -45,20 +47,10 @@ public class Client {
 
         System.out.println(getBarcodeFromFile("C:\\Users\\presl\\Documents\\Preslava\\Java\\HotdogOrNot\\resources\\upc-barcode.gif"));
 
-        /*List<Food> all = getFoodDetails("Cheddar cheese");
+        List<Food> all = getFoodDetails("Cheddar cheese");
         foodCache.addFoods("Cheddar cheese", all);
 
-        for (Food f : all) {
-            System.out.println(f.getFdcId());
-        }
-
-        List<Food> all2 = getFoodDetails("Cheddar cheese");
-
-        System.out.println("Second");
-        for (Food f : all2) {
-            System.out.println(f.getFdcId());
-        }*/
-
+        System.out.println(getFoodFromBarcode("04131858084").getFdcId());
     }
 
     private static NutritionalValues getNutrients(String fdcId) {
@@ -98,7 +90,6 @@ public class Client {
             CompletableFuture<String> foodResponse = client
                     .sendAsync(foodRequest, HttpResponse.BodyHandlers.ofString())
                     .thenApply(HttpResponse::body);
-            ;
 
             JsonArray result = gson.fromJson(foodResponse.get(), JsonObject.class)
                     .getAsJsonArray(Constants.PARSE_FOOD);
@@ -121,8 +112,17 @@ public class Client {
         return foodList;
     }
 
-    private static String getFoodByBarcode() {
-        return null;
+    private static Food getFoodFromBarcode(String parameter) {
+        if(Files.exists(new File(parameter).toPath())) {
+            String barcode = getBarcodeFromFile(parameter);
+            return barcodeCache.getFoodByBarcode(barcode);
+        }
+
+        return barcodeCache.getFoodByBarcode(parameter);
+    }
+
+    private static Food getFoodFromBarcode(String gtinUpc, String directory) {
+        return barcodeCache.getFoodByBarcode(gtinUpc);
     }
 
     //TODO: make it synchronized
