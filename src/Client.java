@@ -1,12 +1,24 @@
+import cache.BarcodeCache;
+import cache.FoodCache;
+import cache.NutrientsCache;
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
+import com.google.zxing.BinaryBitmap;
+import com.google.zxing.MultiFormatReader;
+import com.google.zxing.NotFoundException;
+import com.google.zxing.Result;
+import com.google.zxing.client.j2se.BufferedImageLuminanceSource;
+import com.google.zxing.common.HybridBinarizer;
 import model.Food;
 import model.NutritionalValues;
 import utils.Constants;
 
+import javax.imageio.ImageIO;
+import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
@@ -19,19 +31,34 @@ import java.util.concurrent.ExecutionException;
 public class Client {
     private static HttpClient client;
     private static Gson gson;
+    private static FoodCache foodCache;
+    private static NutrientsCache nutrientsCache;
+    private static BarcodeCache barcodeCache;
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException, NotFoundException {
         client = HttpClient.newHttpClient();
         gson = new Gson();
-        List<Food> all = getFoodDetails("Cheddar cheese");
 
-        Food food = all.iterator().next();
-        NutritionalValues values = getNutrients(food.getFdcId());
-        System.out.println(values.getFat());
+        foodCache = FoodCache.getInstance();
+        nutrientsCache = NutrientsCache.getInstance();
+        barcodeCache = BarcodeCache.getInstance();
+
+        System.out.println(getBarcodeFromFile("C:\\Users\\presl\\Documents\\Preslava\\Java\\HotdogOrNot\\resources\\upc-barcode.gif"));
+
+        /*List<Food> all = getFoodDetails("Cheddar cheese");
+        foodCache.addFoods("Cheddar cheese", all);
 
         for (Food f : all) {
             System.out.println(f.getFdcId());
         }
+
+        List<Food> all2 = getFoodDetails("Cheddar cheese");
+
+        System.out.println("Second");
+        for (Food f : all2) {
+            System.out.println(f.getFdcId());
+        }*/
+
     }
 
     private static NutritionalValues getNutrients(String fdcId) {
@@ -42,8 +69,8 @@ public class Client {
 
             CompletableFuture<String> nutrientsResponse =
                     client
-                    .sendAsync(nutrientsRequest, HttpResponse.BodyHandlers.ofString())
-                    .thenApply(HttpResponse::body);
+                            .sendAsync(nutrientsRequest, HttpResponse.BodyHandlers.ofString())
+                            .thenApply(HttpResponse::body);
 
             JsonObject nutrientsJson = gson.fromJson(nutrientsResponse.get(), JsonObject.class)
                     .getAsJsonObject(Constants.PARSE_NUTRIENTS);
@@ -61,17 +88,28 @@ public class Client {
     private static List<Food> getFoodDetails(String food) {
         List<Food> foodList = new ArrayList<>();
 
+        List<Food> cacheResult = foodCache.getFoodListByName(food);
+        if (cacheResult != null) {
+            return cacheResult;
+        }
+
         try {
             HttpRequest foodRequest = createFoodSearchRequest(food);
             CompletableFuture<String> foodResponse = client
                     .sendAsync(foodRequest, HttpResponse.BodyHandlers.ofString())
-                    .thenApply(HttpResponse::body);;
+                    .thenApply(HttpResponse::body);
+            ;
 
             JsonArray result = gson.fromJson(foodResponse.get(), JsonObject.class)
                     .getAsJsonArray(Constants.PARSE_FOOD);
 
             for (JsonElement element : result) {
                 Food currentFood = gson.fromJson(element.getAsJsonObject(), Food.class);
+
+                if (currentFood.getGtinUpc() != null) {
+                    barcodeCache.addBarcode(currentFood.getGtinUpc(), currentFood);
+                }
+
                 foodList.add(currentFood);
             }
 
@@ -83,8 +121,7 @@ public class Client {
         return foodList;
     }
 
-    private static Food getFoodByBarcode() {
-
+    private static String getFoodByBarcode() {
         return null;
     }
 
@@ -112,4 +149,21 @@ public class Client {
     private static String formatRequestData(String food) {
         return food.replaceAll(" ", Constants.ENCODING_SYMBOL);
     }
+
+    private static String getBarcodeFromFile(String directory) {
+        try (InputStream file = new FileInputStream(directory)) {
+            BinaryBitmap binaryBitmap = new BinaryBitmap(new HybridBinarizer(
+                    new BufferedImageLuminanceSource(
+                            ImageIO.read(file))));
+
+            Result barcodeResult = new MultiFormatReader().decode(binaryBitmap);
+
+            return barcodeResult.getText();
+        } catch (IOException | NotFoundException e) {
+            e.printStackTrace();
+        }
+
+        return null;
+    }
+
 }

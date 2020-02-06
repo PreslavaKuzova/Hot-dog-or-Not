@@ -2,10 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3ec402b1-73eb-496b-966c-c5984162dcd0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/com_google_zxing_core_3_4_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/com_google_zxing_javase_3_4_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/upc-barcode.gif" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cache/FoodCache.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cache/FoodCache.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cache/LFUCache.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cache/LFUCache.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cache/NutrientsCache.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cache/NutrientsCache.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HotdogOrNot.iml" beforeDir="false" afterPath="$PROJECT_DIR$/HotdogOrNot.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HotdogOrNot/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HotdogOrNot/Client.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HotdogOrNot/cache/FoodCache.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HotdogOrNot/cache/FoodCache.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HotdogOrNot/cache/LFUCache.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HotdogOrNot/cache/LFUCache.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HotdogOrNot/cache/NutrientsCache.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HotdogOrNot/cache/NutrientsCache.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,6 +40,11 @@
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\presl\Documents\Preslava\Java\HotdogOrNot\resources" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
