@@ -22,4 +22,10 @@ public class Food {
         return ingredients;
     }
 
+    @Override
+    public String toString() {
+        return "Unique identifier: " + fdcId + System.lineSeparator()
+                + "Description: " + description + System.lineSeparator()
+                + "Ingredients: " + ingredients;
+    }
 }
