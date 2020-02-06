@@ -2,9 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3ec402b1-73eb-496b-966c-c5984162dcd0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/FoodAnalyzer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HotdogOrNot/Client.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HotdogOrNot/model/Food.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HotdogOrNot/model/Food.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HotdogOrNot/model/NutritionalValues.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HotdogOrNot/model/NutritionalValues.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/Client.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/Food.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Food.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/NutritionalValues.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/NutritionalValues.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/nutrients/NutrientBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/nutrients/NutrientBase.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -30,9 +36,9 @@
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="project.structure.side.proportion" value="0.33378017" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -51,9 +57,16 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.FoodAnalyzer">
     <configuration name="Client" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Client" />
+      <option name="MAIN_CLASS_NAME" value="client.Client" />
+      <module name="HotdogOrNot" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FoodAnalyzer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="FoodAnalyzer" />
       <module name="HotdogOrNot" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -61,6 +74,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.FoodAnalyzer" />
         <item itemvalue="Application.Client" />
       </list>
     </recent_temporary>

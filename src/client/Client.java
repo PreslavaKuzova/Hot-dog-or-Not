@@ -1,3 +1,5 @@
+package client;
+
 import cache.BarcodeCache;
 import cache.FoodCache;
 import cache.NutrientsCache;
@@ -37,24 +39,23 @@ public class Client {
     private static NutrientsCache nutrientsCache;
     private static BarcodeCache barcodeCache;
 
-    public static void main(String[] args) throws IOException, NotFoundException {
+    public Client() {
         client = HttpClient.newHttpClient();
         gson = new Gson();
 
         foodCache = FoodCache.getInstance();
         nutrientsCache = NutrientsCache.getInstance();
         barcodeCache = BarcodeCache.getInstance();
-
-        System.out.println(getBarcodeFromFile("C:\\Users\\presl\\Documents\\Preslava\\Java\\HotdogOrNot\\resources\\upc-barcode.gif"));
-
-        List<Food> all = getFoodDetails("Cheddar cheese");
-        foodCache.addFoods("Cheddar cheese", all);
-
-        System.out.println(getFoodFromBarcode("04131858084").getFdcId());
     }
 
-    private static NutritionalValues getNutrients(String fdcId) {
+    //TODO: refactor for possible mistakes and add more functionality
+    public NutritionalValues getNutrients(String fdcId) {
         NutritionalValues nutrients = null;
+
+        NutritionalValues cacheResult = nutrientsCache.getNutrientsByIdentifier(fdcId);
+        if(cacheResult != null) {
+            return cacheResult;
+        }
 
         try {
             HttpRequest nutrientsRequest = createNutrientRequest(fdcId);
@@ -68,6 +69,7 @@ public class Client {
                     .getAsJsonObject(Constants.PARSE_NUTRIENTS);
 
             nutrients = gson.fromJson(nutrientsJson, NutritionalValues.class);
+            nutrientsCache.addNutrient(fdcId, nutrients);
 
         } catch (InterruptedException | ExecutionException e) {
             System.out.println("Something went wrong while trying to send the API request");
@@ -77,7 +79,7 @@ public class Client {
         return nutrients;
     }
 
-    private static List<Food> getFoodDetails(String food) {
+    public List<Food> getFoodDetails(String food) {
         List<Food> foodList = new ArrayList<>();
 
         List<Food> cacheResult = foodCache.getFoodListByName(food);
@@ -109,10 +111,11 @@ public class Client {
             e.printStackTrace();
         }
 
+        foodCache.addFoods(food, foodList);
         return foodList;
     }
 
-    private static Food getFoodFromBarcode(String parameter) {
+    public Food getFoodFromBarcode(String parameter) {
         if(Files.exists(new File(parameter).toPath())) {
             String barcode = getBarcodeFromFile(parameter);
             return barcodeCache.getFoodByBarcode(barcode);
@@ -121,12 +124,11 @@ public class Client {
         return barcodeCache.getFoodByBarcode(parameter);
     }
 
-    private static Food getFoodFromBarcode(String gtinUpc, String directory) {
+    public Food getFoodFromBarcode(String gtinUpc, String directory) {
         return barcodeCache.getFoodByBarcode(gtinUpc);
     }
 
-    //TODO: make it synchronized
-    private static HttpRequest createFoodSearchRequest(String food) {
+    private HttpRequest createFoodSearchRequest(String food) {
         StringBuffer sb = new StringBuffer();
         sb.append(Constants.API_URL)
                 .append(Constants.SEARCH)
@@ -137,7 +139,7 @@ public class Client {
         return HttpRequest.newBuilder(URI.create(sb.toString())).build();
     }
 
-    private static HttpRequest createNutrientRequest(String fdcId) {
+    private HttpRequest createNutrientRequest(String fdcId) {
         StringBuffer sb = new StringBuffer();
         sb.append(Constants.API_URL)
                 .append(fdcId)
@@ -146,11 +148,11 @@ public class Client {
         return HttpRequest.newBuilder(URI.create(sb.toString())).build();
     }
 
-    private static String formatRequestData(String food) {
+    private String formatRequestData(String food) {
         return food.replaceAll(" ", Constants.ENCODING_SYMBOL);
     }
 
-    private static String getBarcodeFromFile(String directory) {
+    private String getBarcodeFromFile(String directory) {
         try (InputStream file = new FileInputStream(directory)) {
             BinaryBitmap binaryBitmap = new BinaryBitmap(new HybridBinarizer(
                     new BufferedImageLuminanceSource(

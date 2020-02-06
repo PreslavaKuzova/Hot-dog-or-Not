@@ -10,4 +10,9 @@ public abstract class NutrientBase {
     public void setValue(double value) {
         this.value = value;
     }
+
+    @Override
+    public String toString() {
+        return Double.toString(value) + System.lineSeparator();
+    }
 }

@@ -45,9 +45,9 @@ public class NutritionalValues {
 
     @Override
     public String toString() {
-        return "Calories: " + calories + System.lineSeparator() + System.lineSeparator()
-                + "Fat: " + fat + System.lineSeparator()
-                + "Carbohydrates: " + carbohydrates + System.lineSeparator()
-                + "Protein: " + protein + System.lineSeparator();
+        return "Calories: " + calories
+                + "Fat: " + fat
+                + "Carbohydrates: " + carbohydrates
+                + "Protein: " + protein;
     }
 }
