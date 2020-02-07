@@ -1,6 +1,6 @@
 package cache;
 
-import utils.Constants;
+import utils.constants.CacheConstants;
 
 import java.util.*;
 
@@ -20,18 +20,18 @@ public abstract class LFUCache <K> {
         if (!cache.containsKey(criteria)) {
             remove();
             cache.putIfAbsent(criteria, product);
-            usageFrequency.putIfAbsent(criteria, Constants.INITIAL_VALUE);
+            usageFrequency.putIfAbsent(criteria, CacheConstants.INITIAL_VALUE);
 
-            if (!order.containsKey(Constants.INITIAL_VALUE)) {
-                order.put(Constants.INITIAL_VALUE, new LinkedHashSet<>());
+            if (!order.containsKey(CacheConstants.INITIAL_VALUE)) {
+                order.put(CacheConstants.INITIAL_VALUE, new LinkedHashSet<>());
             }
 
-            order.get(Constants.INITIAL_VALUE).add(product);
+            order.get(CacheConstants.INITIAL_VALUE).add(product);
         }
     }
 
     private synchronized void remove() {
-        if (cache.size() == Constants.CAPACITY) {
+        if (cache.size() == CacheConstants.CAPACITY) {
             int leastFrequent = Collections.min(order.keySet());
             List<K> toRemove = order.get(leastFrequent).iterator().next();
             order.get(leastFrequent).remove(toRemove);

@@ -15,7 +15,7 @@ import com.google.zxing.client.j2se.BufferedImageLuminanceSource;
 import com.google.zxing.common.HybridBinarizer;
 import model.Food;
 import model.NutritionalValues;
-import utils.Constants;
+import utils.constants.ClientConstants;
 
 import javax.imageio.ImageIO;
 import java.io.File;
@@ -65,7 +65,7 @@ public class Client {
                             .thenApply(HttpResponse::body);
 
             JsonObject nutrientsJson = gson.fromJson(nutrientsResponse.get(), JsonObject.class)
-                    .getAsJsonObject(Constants.PARSE_NUTRIENTS);
+                    .getAsJsonObject(ClientConstants.PARSE_NUTRIENTS);
 
             nutrients = gson.fromJson(nutrientsJson, NutritionalValues.class);
 
@@ -98,7 +98,7 @@ public class Client {
                     .thenApply(HttpResponse::body);
 
             JsonArray result = gson.fromJson(foodResponse.get(), JsonObject.class)
-                    .getAsJsonArray(Constants.PARSE_FOOD);
+                    .getAsJsonArray(ClientConstants.PARSE_FOOD);
 
             for (JsonElement element : result) {
                 Food currentFood = gson.fromJson(element.getAsJsonObject(), Food.class);
@@ -138,10 +138,10 @@ public class Client {
 
     private HttpRequest createFoodSearchRequest(String food) {
         StringBuffer sb = new StringBuffer();
-        sb.append(Constants.API_URL)
-                .append(Constants.SEARCH)
-                .append(Constants.KEY)
-                .append(Constants.GENERAL_SEARCH_INPUT)
+        sb.append(ClientConstants.API_URL)
+                .append(ClientConstants.SEARCH)
+                .append(ClientConstants.KEY)
+                .append(ClientConstants.GENERAL_SEARCH_INPUT)
                 .append(formatRequestData(food));
 
         return HttpRequest.newBuilder(URI.create(sb.toString())).build();
@@ -149,15 +149,15 @@ public class Client {
 
     private HttpRequest createNutrientRequest(String fdcId) {
         StringBuffer sb = new StringBuffer();
-        sb.append(Constants.API_URL)
+        sb.append(ClientConstants.API_URL)
                 .append(fdcId)
-                .append(Constants.KEY);
+                .append(ClientConstants.KEY);
 
         return HttpRequest.newBuilder(URI.create(sb.toString())).build();
     }
 
     private String formatRequestData(String food) {
-        return food.replaceAll(" ", Constants.ENCODING_SYMBOL);
+        return food.replaceAll(" ", ClientConstants.ENCODING_SYMBOL);
     }
 
     private String getBarcodeFromFile(String directory) {

@@ -2,9 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3ec402b1-73eb-496b-966c-c5984162dcd0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/utils/constants/CacheConstants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/constants/FoodAnalyzerConstants.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HotdogOrNot/FoodAnalyzer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HotdogOrNot/FoodAnalyzer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HotdogOrNot/cache/LFUCache.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HotdogOrNot/cache/LFUCache.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HotdogOrNot/client/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HotdogOrNot/client/Client.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HotdogOrNot/utils/Constants.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FoodAnalyzer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FoodAnalyzer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cache/LFUCache.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cache/LFUCache.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/client/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/NutritionalValues.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/NutritionalValues.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/constants/ClientConstants.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
