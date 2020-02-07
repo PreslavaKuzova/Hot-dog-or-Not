@@ -10,6 +10,15 @@ public class NutritionalValues {
     private Carbohydrates carbohydrates;
     private Protein protein;
     private Calories calories;
+    private String ingredients;
+
+    public String getIngredients() {
+        return ingredients;
+    }
+
+    public void setIngredients(String ingredients) {
+        this.ingredients = ingredients;
+    }
 
     public double getFat() {
         return this.fat.getValue();
@@ -45,7 +54,8 @@ public class NutritionalValues {
 
     @Override
     public String toString() {
-        return "Calories: " + calories
+        return "Ingredients: " + ingredients + System.lineSeparator()
+                + "Calories: " + calories
                 + "Fat: " + fat
                 + "Carbohydrates: " + carbohydrates
                 + "Protein: " + protein;

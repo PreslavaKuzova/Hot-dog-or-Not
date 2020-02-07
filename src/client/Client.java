@@ -61,14 +61,18 @@ public class Client {
             HttpRequest nutrientsRequest = createNutrientRequest(fdcId);
 
             CompletableFuture<String> nutrientsResponse =
-                    client
-                            .sendAsync(nutrientsRequest, HttpResponse.BodyHandlers.ofString())
+                    client.sendAsync(nutrientsRequest, HttpResponse.BodyHandlers.ofString())
                             .thenApply(HttpResponse::body);
 
             JsonObject nutrientsJson = gson.fromJson(nutrientsResponse.get(), JsonObject.class)
                     .getAsJsonObject(Constants.PARSE_NUTRIENTS);
 
             nutrients = gson.fromJson(nutrientsJson, NutritionalValues.class);
+
+            String ingredients = gson.fromJson(nutrientsResponse.get(), JsonObject.class)
+                    .get("ingredients").toString();
+            nutrients.setIngredients(ingredients);
+
             nutrientsCache.addNutrient(fdcId, nutrients);
 
         } catch (InterruptedException | ExecutionException e) {
@@ -126,6 +130,10 @@ public class Client {
 
     public Food getFoodFromBarcode(String gtinUpc, String directory) {
         return barcodeCache.getFoodByBarcode(gtinUpc);
+    }
+
+    public String recognizeFood(String directory) {
+        return null;
     }
 
     private HttpRequest createFoodSearchRequest(String food) {
