@@ -2,34 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3ec402b1-73eb-496b-966c-c5984162dcd0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/barcode.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/data.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/hot-dog.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/pizza.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controllers/IOController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/presenters/IOPresenter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/io/devices/ConsoleDevice.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/io/devices/IODevice.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/data/client/BarcodeClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/data/client/CachedNetworkClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/data/client/ImageRecognitionClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/data/client/NetworkClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/HotdogOrNot/FoodAnalyzer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HotdogOrNot/FoodAnalyzer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HotdogOrNot/cache/LFUCache.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HotdogOrNot/cache/LFUCache.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HotdogOrNot/client/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HotdogOrNot/client/Client.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HotdogOrNot/upc-barcode.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HotdogOrNot/utils/constants/FoodAnalyzerConstants.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HotdogOrNot/utils/constants/FoodAnalyzerConstants.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/upc-barcode.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FoodAnalyzer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FoodAnalyzer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cache/BarcodeCache.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/cache/BarcodeCache.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cache/FoodCache.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/cache/FoodCache.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cache/LFUCache.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/cache/LFUCache.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cache/NutrientsCache.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/cache/NutrientsCache.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/client/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Food.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/model/Food.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/NutritionalValues.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/model/NutritionalValues.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/nutrients/Calories.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/model/nutrients/Calories.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/nutrients/Carbohydrates.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/model/nutrients/Carbohydrates.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/nutrients/Fat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/model/nutrients/Fat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/nutrients/NutrientBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/model/nutrients/NutrientBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/nutrients/Protein.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/model/nutrients/Protein.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HotdogOrNot/cache/BarcodeCache.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HotdogOrNot/cache/FoodCache.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HotdogOrNot/cache/LFUCache.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HotdogOrNot/cache/NutrientsCache.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HotdogOrNot/controllers/IOController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HotdogOrNot/controllers/IOController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HotdogOrNot/data/model/client/Client.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HotdogOrNot/io/devices/ConsoleDevice.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HotdogOrNot/io/devices/IODevice.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HotdogOrNot/presenters/IOPresenter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HotdogOrNot/presenters/IOPresenter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/IOController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/IOController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/client/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/client/Client.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -55,6 +44,7 @@
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="extract.method.default.visibility" value="private" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.33378017" />

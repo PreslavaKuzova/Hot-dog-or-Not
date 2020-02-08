@@ -1,46 +1,51 @@
 package controllers;
 
-import data.client.Client;
-import utils.io.devices.IODevice;
-import presenters.IOPresenter;
+import data.client.BarcodeClient;
+import data.client.CachedNetworkClient;
+import data.client.NetworkClient;
 import data.model.Food;
 import data.model.NutritionalValues;
+import presenters.IOPresenter;
+import utils.io.devices.IODevice;
 
+import java.net.http.HttpClient;
 import java.util.List;
 
 public class IOController {
 
-    private final Client client;
     private final IOPresenter presenter;
+    private final NetworkClient networkClient;
+    private final BarcodeClient barcodeClient;
 
     public IOController(IODevice device) {
-        client = new Client();
+        networkClient = new CachedNetworkClient(HttpClient.newHttpClient());
+        barcodeClient = new BarcodeClient();
         presenter = new IOPresenter(device);
         presenter.setController(this);
         presenter.startReadingDataFlow();
     }
 
     public void onFoodRequestMade(String food) {
-        List<Food> foodDetails = client.getFoodDetails(food);
+        List<Food> foodDetails = networkClient.getFoodDetails(food);
         presenter.showData(foodDetails);
     }
 
     public void onNutrientsRequestMade(String fdcId) {
-        NutritionalValues nutrients = client.getNutrients(fdcId);
+        NutritionalValues nutrients = networkClient.getNutrients(fdcId);
         if (nutrients != null) {
             presenter.showData(nutrients);
         }
     }
 
     public void onBarcodeRequestMade(String barcode) {
-        Food food = client.getFoodFromBarcode(barcode);
-        if (food != null) {
+        Food food = barcodeClient.getFoodFromBarcode(barcode);
+        if(food != null) {
             presenter.showData(food);
         }
     }
 
     public void onPhotoRequestMade(String directory) {
-        List<Food> foodList = client.recognizeFood(directory);
-        presenter.showData(foodList);
+//        List<Food> foodList = client.recognizeFood(directory);
+//        presenter.showData(foodList);
     }
 }
