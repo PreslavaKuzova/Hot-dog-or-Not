@@ -1,16 +1,245 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3ec402b1-73eb-496b-966c-c5984162dcd0" name="Default Changelist" comment="">
+    <list default="true" id="61c94b19-cee1-4481-9d90-021061743d9e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/HotdogOrNot.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_fasterxml_jackson_core_jackson_core_2_10_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_annotations_4_1_1_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_api_api_common_1_8_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_api_gax_1_52_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_api_gax_grpc_1_52_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_api_grpc_proto_google_cloud_vision_v1_1_81_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_api_grpc_proto_google_cloud_vision_v1p1beta1_0_82_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_api_grpc_proto_google_cloud_vision_v1p2beta1_1_81_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_api_grpc_proto_google_cloud_vision_v1p3beta1_0_82_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_api_grpc_proto_google_cloud_vision_v1p4beta1_0_82_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_api_grpc_proto_google_common_protos_1_17_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_auth_google_auth_library_credentials_0_19_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_auth_google_auth_library_oauth2_http_0_19_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_auto_value_auto_value_annotations_1_7.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_cloud_google_cloud_vision_1_99_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_code_findbugs_jsr305_3_0_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_code_gson_gson_2_8_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_errorprone_error_prone_annotations_2_3_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_guava_failureaccess_1_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_guava_guava_28_1_android.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_guava_listenablefuture_9999_0_empty_to_avoid_conflict_with_guava.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_http_client_google_http_client_1_33_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_http_client_google_http_client_jackson2_1_33_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_j2objc_j2objc_annotations_1_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_protobuf_protobuf_java_3_11_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_protobuf_protobuf_java_util_3_10_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_zxing_core_3_2_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_zxing_javase_3_2_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__commons_codec_commons_codec_1_11.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__commons_logging_commons_logging_1_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__io_grpc_grpc_alts_1_25_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__io_grpc_grpc_api_1_26_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__io_grpc_grpc_auth_1_25_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__io_grpc_grpc_context_1_26_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__io_grpc_grpc_core_1_25_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__io_grpc_grpc_grpclb_1_25_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__io_grpc_grpc_netty_shaded_1_25_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__io_grpc_grpc_protobuf_1_26_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__io_grpc_grpc_protobuf_lite_1_26_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__io_grpc_grpc_stub_1_26_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__io_opencensus_opencensus_api_0_24_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__io_opencensus_opencensus_contrib_grpc_metrics_0_21_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__io_opencensus_opencensus_contrib_http_util_0_24_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__io_perfmark_perfmark_api_0_19_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__javax_annotation_javax_annotation_api_1_3_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__junit_junit_4_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_apache_commons_commons_lang3_3_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_apache_httpcomponents_httpclient_4_5_10.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_apache_httpcomponents_httpcore_4_4_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_checkerframework_checker_compat_qual_2_5_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_codehaus_mojo_animal_sniffer_annotations_1_18.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_conscrypt_conscrypt_openjdk_uber_2_2_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_core_1_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_immutables_gson_2_8_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_threeten_threetenbp_1_4_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/HotdogOrNot.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/untitled.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/untitled.main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/untitled.test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/utils/io/devices/FileDevice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/com_google_code_gson_gson_2_8_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/com_google_zxing_core_3_4_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/com_google_zxing_javase_3_4_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/IOController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/IOController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/client/ImageRecognitionClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/client/ImageRecognitionClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HotdogOrNot.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/animal-sniffer-annotations-1.18.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/aopalliance-1.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/api-common-1.8.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/auto-value-1.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/checker-compat-qual-2.5.5.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/commons-codec-1.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/commons-fileupload-1.3.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/commons-io-2.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/commons-logging-1.1.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/datastore-v1-proto-client-1.1.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/datastore-v1-protos-1.0.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/error_prone_annotations-2.3.4.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/failureaccess-1.0.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/gax-0.0.14.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/gcloud-java-0.2.8.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/gcloud-java-bigquery-0.2.8.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/gcloud-java-compute-0.2.8.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/gcloud-java-core-0.2.8.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/gcloud-java-datastore-0.2.8.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/gcloud-java-dns-0.2.8.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/gcloud-java-logging-0.2.8.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/gcloud-java-pubsub-0.2.8.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/gcloud-java-resourcemanager-0.2.8.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/gcloud-java-storage-0.2.8.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/gcloud-java-translate-0.2.8.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/google-api-client-1.22.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/google-api-client-appengine-1.21.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/google-api-client-servlet-1.21.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/google-api-services-bigquery-v2-rev303-1.22.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/google-api-services-cloudresourcemanager-v1beta1-rev10-1.21.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/google-api-services-compute-v1-rev103-1.21.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/google-api-services-dns-v1-rev7-1.21.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/google-api-services-storage-v1-rev62-1.21.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/google-api-services-translate-v2-rev47-1.22.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/google-auth-library-credentials-0.3.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/google-auth-library-oauth2-http-0.3.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/google-http-client-1.21.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/google-http-client-appengine-1.21.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/google-http-client-jackson-1.21.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/google-http-client-jackson2-1.19.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/google-http-client-jdo-1.21.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/google-http-client-protobuf-1.20.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/google-oauth-client-1.21.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/google-oauth-client-appengine-1.21.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/google-oauth-client-servlet-1.21.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/grpc-all-0.15.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/grpc-api-1.27.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/grpc-auth-0.15.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/grpc-context-1.27.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/grpc-core-0.15.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/grpc-google-cloud-datalabeling-v1beta1-0.83.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/grpc-google-common-protos-0.0.7.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/grpc-google-logging-v2-0.0.7.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/grpc-google-pubsub-v1-0.0.7.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/grpc-netty-0.15.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/grpc-okhttp-0.15.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/grpc-protobuf-0.15.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/grpc-protobuf-1.27.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/grpc-protobuf-lite-0.15.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/grpc-protobuf-lite-1.27.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/grpc-protobuf-nano-0.15.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/grpc-stub-0.15.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/grpc-stub-1.27.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/gson-2.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/guava-19.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/guava-28.2-android.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/guice-4.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/httpclient-4.0.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/httpcore-4.0.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/j2objc-annotations-1.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/jackson-core-2.1.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/jackson-core-asl-1.9.11.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/javax.annotation-api-1.3.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/javax.inject-1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/jdo2-api-2.3-eb.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/joda-time-2.9.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/json-20151123.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/jsr305-1.3.9.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/jsr305-3.0.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/netty-buffer-4.1.1.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/netty-codec-4.1.1.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/netty-codec-http-4.1.1.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/netty-codec-http2-4.1.1.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/netty-common-4.1.1.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/netty-handler-4.1.1.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/netty-resolver-4.1.1.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/netty-tcnative-boringssl-static-1.1.33.Fork17.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/netty-transport-4.1.1.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/okhttp-2.5.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/okio-1.6.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/proto-google-cloud-datalabeling-v1beta1-0.83.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/proto-google-common-protos-1.17.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/protobuf-java-3.0.0-beta-3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/protobuf-java-3.11.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/protobuf-java-util-3.0.0-beta-3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/protobuf-javanano-3.0.0-alpha-5.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/servlet-api-2.5.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/transaction-api-1.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HotdogOrNot/FoodAnalyzer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HotdogOrNot/META-INF/HotdogOrNot.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HotdogOrNot/barcode.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HotdogOrNot/controllers/IOController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HotdogOrNot/data.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HotdogOrNot/data/cache/BarcodeCache.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HotdogOrNot/data/cache/FoodCache.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HotdogOrNot/data/cache/LFUCache.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HotdogOrNot/data/cache/NutrientsCache.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HotdogOrNot/data/client/CachedNetworkClient.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HotdogOrNot/data/client/Client.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HotdogOrNot/data/client/NetworkClient.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HotdogOrNot/data/model/Food.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HotdogOrNot/data/model/NutritionalValues.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HotdogOrNot/data/model/nutrients/Calories.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HotdogOrNot/data/model/nutrients/Carbohydrates.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HotdogOrNot/data/model/nutrients/Fat.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HotdogOrNot/data/model/nutrients/NutrientBase.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HotdogOrNot/data/model/nutrients/Protein.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HotdogOrNot/hot-dog.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HotdogOrNot/pizza.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HotdogOrNot/presenters/IOPresenter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HotdogOrNot/utils/constants/CacheConstants.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HotdogOrNot/utils/constants/ClientConstants.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HotdogOrNot/utils/constants/FoodAnalyzerConstants.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HotdogOrNot/utils/io/devices/ConsoleDevice.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HotdogOrNot/utils/io/devices/IODevice.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/Food Analyzer-029e18fa7c9e.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/barcode.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/data.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/hot-dog.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/pizza.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FoodAnalyzer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/IOController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/cache/BarcodeCache.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/cache/FoodCache.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/cache/LFUCache.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/cache/NutrientsCache.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/client/BarcodeClient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/client/CachedNetworkClient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/client/Client.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/client/ImageRecognitionClient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/client/NetworkClient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/model/Food.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/model/NutritionalValues.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/model/nutrients/Calories.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/model/nutrients/Carbohydrates.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/model/nutrients/Fat.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/model/nutrients/NutrientBase.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/model/nutrients/Protein.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/presenters/IOPresenter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/constants/CacheConstants.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/constants/ClientConstants.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/constants/FoodAnalyzerConstants.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/io/devices/ConsoleDevice.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/io/devices/IODevice.java" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -22,30 +251,13 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="1X3TBcyOlQIoAxOlb1EI1zhDjvY" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectId" id="1XWSMl44cjkVlg0C4ZkbyRA1AJh" />
   <component name="PropertiesComponent">
     <property name="ACTIVE_CLOUD_PROJECT_ACCOUNT" value="linofrosi@gmail.com" />
     <property name="ACTIVE_CLOUD_PROJECT_ID" value="food-analyzer-1581058350065" />
     <property name="ACTIVE_CLOUD_PROJECT_NAME" value="Food Analyzer" />
     <property name="ACTIVE_CLOUD_PROJECT_NUMBER" value="265536634160" />
-    <property name="Downloaded.Files.Path.Enabled" value="true" />
-    <property name="Repository.Attach.Annotations" value="false" />
-    <property name="Repository.Attach.JavaDocs" value="false" />
-    <property name="Repository.Attach.Sources" value="false" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="extract.method.default.visibility" value="private" />
-    <property name="project.structure.last.edited" value="Problems" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.33378017" />
-  </component>
-  <component name="RecentsManager">
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\presl\Documents\Preslava\Java\HotdogOrNot\resources" />
-    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -60,32 +272,37 @@
     </option>
   </component>
   <component name="RunManager" selected="Application.FoodAnalyzer">
-    <configuration name="Client" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <envs>
-        <env name="GOOGLE_CLOUD_PROJECT" value="food-analyzer-1581058350065" />
-        <env name="GOOGLE_APPLICATION_CREDENTIALS" value="C:\Users\presl\Desktop\Food Analyzer-200208182923.json" />
-      </envs>
-      <option name="MAIN_CLASS_NAME" value="data.client.Client" />
-      <module name="HotdogOrNot" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="FoodAnalyzer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <envs>
-        <env name="GOOGLE_CLOUD_PROJECT" value="food-analyzer-1581058350065" />
-        <env name="GOOGLE_APPLICATION_CREDENTIALS" value="C:\Users\presl\Desktop\Food Analyzer-200208182923.json" />
-      </envs>
       <option name="MAIN_CLASS_NAME" value="FoodAnalyzer" />
-      <module name="HotdogOrNot" />
+      <module name="untitled.main" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Unnamed" type="GradleRunConfiguration" factoryName="Gradle" nameIsGenerated="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="vmOptions" value="" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Gradle.Unnamed" />
+      <item itemvalue="Application.FoodAnalyzer" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.FoodAnalyzer" />
-        <item itemvalue="Application.Client" />
       </list>
     </recent_temporary>
   </component>
@@ -94,11 +311,11 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="3ec402b1-73eb-496b-966c-c5984162dcd0" name="Default Changelist" comment="" />
-      <created>1580273643087</created>
+      <changelist id="61c94b19-cee1-4481-9d90-021061743d9e" name="Default Changelist" comment="" />
+      <created>1581160176100</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1580273643087</updated>
+      <updated>1581160176100</updated>
     </task>
     <servers />
   </component>
