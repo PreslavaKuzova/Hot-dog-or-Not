@@ -2,6 +2,7 @@ package controllers;
 
 import data.client.BarcodeClient;
 import data.client.CachedNetworkClient;
+import data.client.ImageRecognitionClient;
 import data.client.NetworkClient;
 import data.model.Food;
 import data.model.NutritionalValues;
@@ -16,10 +17,12 @@ public class IOController {
     private final IOPresenter presenter;
     private final NetworkClient networkClient;
     private final BarcodeClient barcodeClient;
+    private final ImageRecognitionClient imageRecognitionClient;
 
     public IOController(IODevice device) {
         networkClient = new CachedNetworkClient(HttpClient.newHttpClient());
         barcodeClient = new BarcodeClient();
+        imageRecognitionClient = new ImageRecognitionClient();
         presenter = new IOPresenter(device);
         presenter.setController(this);
         presenter.startReadingDataFlow();
