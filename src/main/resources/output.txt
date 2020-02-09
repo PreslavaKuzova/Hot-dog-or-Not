@@ -1,0 +1,206 @@
+Unique identifier: 338105
+Description: Beef and noodles with (mushroom) soup (mixture)
+Ingredients: null
+
+Unique identifier: 341386
+Description: Beef noodle soup, home recipe
+Ingredients: null
+
+Unique identifier: 171539
+Description: Soup, beef noodle, canned, condensed
+Ingredients: null
+
+Unique identifier: 341383
+Description: Beef noodle soup, canned or ready-to-serve
+Ingredients: null
+
+Unique identifier: 171614
+Description: Soup, ramen noodle, beef flavor, dry
+Ingredients: null
+
+Unique identifier: 171160
+Description: Soup, tomato beef with noodle, canned, condensed
+Ingredients: null
+
+Unique identifier: 342582
+Description: Tomato beef noodle soup, prepared with water
+Ingredients: null
+
+Unique identifier: 343727
+Description: Vegetable beef noodle soup, prepared with water
+Ingredients: null
+
+Unique identifier: 341401
+Description: Soup, mostly noodles
+Ingredients: null
+
+Unique identifier: 341400
+Description: Instant soup, noodle
+Ingredients: null
+
+Unique identifier: 343736
+Description: Vegetable beef soup with noodles or pasta, home recipe
+Ingredients: null
+
+Unique identifier: 341379
+Description: Noodle soup, NFS
+Ingredients: null
+
+Unique identifier: 338104
+Description: Beef stroganoff with noodles
+Ingredients: null
+
+Unique identifier: 338101
+Description: Beef goulash with noodles
+Ingredients: null
+
+Unique identifier: 172906
+Description: Soup, beef noodle, canned, prepared with equal volume water
+Ingredients: null
+
+Unique identifier: 338208
+Description: Fish and noodles with (mushroom) soup
+Ingredients: null
+
+Unique identifier: 338097
+Description: Beef and noodles, no sauce (mixture)
+Ingredients: null
+
+Unique identifier: 172919
+Description: Soup, tomato beef with noodle, canned, prepared with equal volume water
+Ingredients: null
+
+Unique identifier: 338102
+Description: Beef and noodles with gravy (mixture)
+Ingredients: null
+
+Unique identifier: 174545
+Description: Soup, HEALTHY CHOICE Chicken Noodle Soup, canned
+Ingredients: null
+
+Unique identifier: 341405
+Description: Noodle soup with vegetables, Asian style
+Ingredients: null
+
+Unique identifier: 171556
+Description: CAMPBELL'S, Chicken Noodle Soup, condensed
+Ingredients: null
+
+Unique identifier: 338183
+Description: Shrimp and noodles with (mushroom) soup (mixture)
+Ingredients: null
+
+Unique identifier: 171543
+Description: Soup, chicken noodle, canned, condensed
+Ingredients: null
+
+Unique identifier: 171571
+Description: Soup, chicken noodle, dry, mix
+Ingredients: null
+
+Unique identifier: 341402
+Description: Soup, mostly noodles, reduced sodium
+Ingredients: null
+
+Unique identifier: 338203
+Description: Tuna noodle casserole with (mushroom) soup
+Ingredients: null
+
+Unique identifier: 343722
+Description: Vegetable noodle soup, home recipe
+Ingredients: null
+
+Unique identifier: 342585
+Description: Tomato noodle soup, canned, prepared with milk
+Ingredients: null
+
+Unique identifier: 173516
+Description: Babyfood, dinner, beef noodle, junior
+Ingredients: null
+
+Unique identifier: 172258
+Description: Babyfood, dinner, beef noodle, strained
+Ingredients: null
+
+Unique identifier: 337982
+Description: Beef with (mushroom) soup (mixture)
+Ingredients: null
+
+Unique identifier: 338904
+Description: Beef noodle soup, Puerto Rican style (Sopa de carne y fideos)
+Ingredients: null
+
+Unique identifier: 338942
+Description: Bird's nest soup (chicken, ham, and noodles)
+Ingredients: null
+
+Unique identifier: 174548
+Description: CAMPBELL'S CHUNKY, Classic Chicken Noodle Soup
+Ingredients: null
+
+Unique identifier: 338154
+Description: Chicken or turkey and noodles with (mushroom) soup (mixture)
+Ingredients: null
+
+Unique identifier: 341388
+Description: Chicken or turkey noodle soup, home recipe
+Ingredients: null
+
+Unique identifier: 338963
+Description: Codfish soup with noodles, Puerto Rican style
+Ingredients: null
+
+Unique identifier: 341403
+Description: Instant soup, noodle with egg, shrimp or chicken
+Ingredients: null
+
+Unique identifier: 341391
+Description: Noodle and potato soup, Puerto Rican style
+Ingredients: null
+
+Unique identifier: 171177
+Description: Soup, ramen noodle, any flavor, dry
+Ingredients: null
+
+Unique identifier: 171615
+Description: Soup, ramen noodle, chicken flavor, dry
+Ingredients: null
+
+Unique identifier: 342588
+Description: Tomato vegetable soup with noodles, prepared with water
+Ingredients: null
+
+Unique identifier: 338528
+Description: Tuna casserole with vegetables and (mushroom) soup, no noodles
+Ingredients: null
+
+Unique identifier: 338370
+Description: Tuna noodle casserole with vegetables and (mushroom) soup
+Ingredients: null
+
+Unique identifier: 343742
+Description: Vegetable beef soup, chunky style
+Ingredients: null
+
+Unique identifier: 338099
+Description: Beef and noodles with tomato-based sauce (mixture)
+Ingredients: null
+
+Unique identifier: 338248
+Description: Beef, noodles, and vegetables (excluding carrots, broccoli, and dark-green leafy), (mushroom) soup (mixture)
+Ingredients: null
+
+Unique identifier: 338247
+Description: Beef, noodles, and vegetables (including carrots, broccoli, and/or dark-green leafy), (mushroom) soup (mixture)
+Ingredients: null
+
+Unique identifier: 338819
+Description: Beef and egg noodles, baby food, junior
+Ingredients: null
+
+Ingredients: "VEGETABLE OILS (PALM AND SHEANUT). DRY COCONUT, SUGAR, ALMONDS, SKIM MILK POWDER, WHEY POWDER (MILK), WHEAT FLOUR, NATURAL AND ARTIFICIAL FLAVORS, LECITHIN AS EMULSIFIER (SOY), SALT, SODIUM BICARBONATE AS LEAVENING AGENT."
+Calories: 189.9
+Fat: 15.0
+Carbohydrates: 12.0
+Protein: 2.001
+
