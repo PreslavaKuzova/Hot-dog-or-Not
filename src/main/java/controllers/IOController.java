@@ -9,7 +9,6 @@ import data.model.NutritionalValues;
 import presenters.IOPresenter;
 import utils.io.devices.IODevice;
 
-import java.io.IOException;
 import java.net.http.HttpClient;
 import java.util.List;
 
@@ -43,15 +42,16 @@ public class IOController {
 
     public void onBarcodeRequestMade(String barcode) {
         Food food = barcodeClient.getFoodFromBarcode(barcode);
-        if(food != null) {
+        if (food != null) {
             presenter.showData(food);
         }
     }
 
     public void onPhotoRequestMade(String directory) {
         try {
-            imageRecognitionClient.recognizeImage(directory);
-        } catch (IOException e) {
+            List<String> labels = imageRecognitionClient.recognizeImage(directory);
+            presenter.showData(labels);
+        } catch (Exception e) {
             e.printStackTrace();
         }
 

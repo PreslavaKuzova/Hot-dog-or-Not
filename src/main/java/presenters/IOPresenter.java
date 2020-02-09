@@ -1,9 +1,8 @@
 package presenters;
 
 import controllers.IOController;
-import utils.io.devices.IODevice;
-import data.model.Food;
 import utils.constants.FoodAnalyzerConstants;
+import utils.io.devices.IODevice;
 
 import java.util.List;
 
@@ -44,9 +43,9 @@ public class IOPresenter {
         this.controller = ioController;
     }
 
-    public void showData(List<Food> foods) {
-        for (Food f : foods) {
-            device.write(f.toString());
+    public <K> void showData(List<K> data) {
+        for (K current : data) {
+            device.write(current.toString());
         }
     }
 

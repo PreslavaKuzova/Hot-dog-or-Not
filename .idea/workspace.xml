@@ -2,10 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="61c94b19-cee1-4481-9d90-021061743d9e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/lib/simple-1.6.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/data/client/NetworkClientTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/HotdogOrNot.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/HotdogOrNot.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/untitled.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/untitled.main.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/untitled.test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/untitled.test.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/FoodAnalyzer.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/FoodAnalyzer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/controllers/IOController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/controllers/IOController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/data/client/ImageRecognitionClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/data/client/ImageRecognitionClient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/presenters/IOPresenter.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/presenters/IOPresenter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/utils/io/devices/FileDevice.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/utils/io/devices/FileDevice.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/FoodAnalyzer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FoodAnalyzer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utils/io/devices/FileDevice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/io/devices/FileDevice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/data.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/IOController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/IOController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/data/client/ImageRecognitionClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/client/ImageRecognitionClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/presenters/IOPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/presenters/IOPresenter.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -35,6 +47,15 @@
     <property name="ACTIVE_CLOUD_PROJECT_NAME" value="Food Analyzer" />
     <property name="ACTIVE_CLOUD_PROJECT_NUMBER" value="265536634160" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="extract.method.default.visibility" value="private" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\presl\Documents\Preslava\Java\HotdogOrNot\lib" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -50,6 +71,10 @@
   </component>
   <component name="RunManager" selected="Application.FoodAnalyzer">
     <configuration name="FoodAnalyzer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <envs>
+        <env name="GOOGLE_CLOUD_PROJECT" value="food-analyzer-1581058350065" />
+        <env name="GOOGLE_APPLICATION_CREDENTIALS" value="C:\Users\presl\Desktop\Food Analyzer-200209133423.json" />
+      </envs>
       <option name="MAIN_CLASS_NAME" value="FoodAnalyzer" />
       <module name="untitled.main" />
       <method v="2">
