@@ -1,11 +1,3 @@
 get-food beef noodle soup
 get-food-report 415269
-get-food beef noodle soup
-get-food-report 415269
-get-food beef noodle soup
-get-food-report 415269
-get-food beef noodle soup
-get-food-report 415269
-get-food beef noodle soup
-get-food-report 415269
-get-food-by-barcode C:\Users\presl\Documents\Preslava\Java\HotdogOrNot\resources\barcode.gif
+exit program
