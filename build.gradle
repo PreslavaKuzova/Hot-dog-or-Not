@@ -8,6 +8,7 @@ sourceCompatibility = 1.8
 
 repositories {
     mavenCentral()
+    jcenter()
     flatDir {
         dirs 'lib'
     }
@@ -17,7 +18,7 @@ dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
     compile 'com.google.cloud:google-cloud-vision:1.99.1'
     compile 'org.immutables:gson:2.8.3'
-    compile 'org.testifyproject.mock:mockito:1.0.6'
+    testCompile 'org.testifyproject.mock:mockito:1.0.6'
     implementation name:  'simple-1.6.2'
     implementation 'com.google.zxing:core:3.2.0'
     implementation 'com.google.zxing:javase:3.2.0'

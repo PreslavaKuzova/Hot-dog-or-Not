@@ -8,4 +8,6 @@ public class ClientConstants {
     public final static String ENCODING_SYMBOL = "%20";
     public final static String PARSE_FOOD = "foods";
     public final static String PARSE_NUTRIENTS = "labelNutrients";
+    public final static String PARSE_INGREDIENTS = "ingredients";
+
 }

@@ -29,31 +29,40 @@ public class IOController {
     }
 
     public void onFoodRequestMade(String food) {
-        List<Food> foodDetails = networkClient.getFoodDetails(food);
-        presenter.showData(foodDetails);
+        new Thread(() -> {
+            List<Food> foodDetails = networkClient.getFoodDetails(food);
+            presenter.showData(foodDetails);
+        }).start();
     }
 
     public void onNutrientsRequestMade(String fdcId) {
-        NutritionalValues nutrients = networkClient.getNutrients(fdcId);
-        if (nutrients != null) {
-            presenter.showData(nutrients);
-        }
+        new Thread(() -> {
+            NutritionalValues nutrients = networkClient.getNutrients(fdcId);
+            if (nutrients != null) {
+                presenter.showData(nutrients);
+            }
+        }).start();
     }
 
     public void onBarcodeRequestMade(String barcode) {
-        Food food = barcodeClient.getFoodFromBarcode(barcode);
-        if (food != null) {
-            presenter.showData(food);
-        }
+        new Thread(() -> {
+            Food food = barcodeClient.getFoodFromBarcode(barcode);
+            if (food != null) {
+                presenter.showData(food);
+            }
+        }).start();
     }
 
     public void onPhotoRequestMade(String directory) {
-        try {
-            List<String> labels = imageRecognitionClient.recognizeImage(directory);
-            presenter.showData(labels);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
+        new Thread(() -> {
+            try {
+                List<String> labels = imageRecognitionClient.recognizeImage(directory);
+                presenter.showData(labels);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }).start();
     }
+
+
 }

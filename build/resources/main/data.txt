@@ -1,3 +1,22 @@
 get-food beef noodle soup
+get-food beef pizza
+get-food beef beans
+get-food beef cabbage
+get-food beef spaghetti
+get-food beef lamb
+get-food beef pork
+get-food beef cheetos
+get-food beef noodle soup
+get-food-report 454972
+get-food beef pizza
+get-food beef beans
+get-food beef cabbage
+get-food-report 454972
+get-food beef spaghetti
+get-food beef lamb
+get-food beef pork
+get-food beef cheetos
 get-food-report 415269
-exit program
+get-food-report 454972
+get-food-report 171347
+get-food-report 341826

@@ -15,6 +15,8 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.file.Files;
+import java.util.Arrays;
+import java.util.stream.Collectors;
 
 public class BarcodeClient {
     private final BarcodeCache barcodeCache;
@@ -24,6 +26,14 @@ public class BarcodeClient {
     }
 
     public Food getFoodFromBarcode(String parameter) {
+        String[] result = parameter.split("\\|");
+
+        if(result.length == 2) {
+            parameter = Arrays.stream(result)
+                    .filter(x -> x.contains("--code="))
+                    .limit(1).collect(Collectors.joining());
+        }
+
         if(Files.exists(new File(parameter).toPath())) {
             String barcode = getBarcodeFromFile(parameter);
             return barcodeCache.getFoodByBarcode(barcode);

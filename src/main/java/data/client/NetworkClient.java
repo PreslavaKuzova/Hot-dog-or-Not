@@ -42,9 +42,10 @@ public class NetworkClient {
 
             nutrients = gson.fromJson(nutrientsJson, NutritionalValues.class);
 
-            String ingredients = gson.fromJson(nutrientsResponse.get(), JsonObject.class)
-                    .get("ingredients").toString();
-            nutrients.setIngredients(ingredients);
+            JsonObject json =  gson.fromJson(nutrientsResponse.get(), JsonObject.class);
+            if(json.has(ClientConstants.PARSE_INGREDIENTS)) {
+                nutrients.setIngredients(json.get(ClientConstants.PARSE_INGREDIENTS).toString());
+            }
 
         } catch (InterruptedException | ExecutionException e) {
             System.out.println("Something went wrong while trying to send the API request");
